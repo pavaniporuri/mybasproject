@@ -1,0 +1,1 @@
+{"myhanaproj3.db::LKMDEMO.Customers": {"target": {"object":"Customers","schema":"LKMDEMO"}},"myhanaproj3.db::LKMDEMO.Employee": {"target": {"object":"Employee","schema":"LKMDEMO"}},"myhanaproj3.db::LKMDEMO.HOTEL": {"target": {"object":"HOTEL","schema":"LKMDEMO"}}}

@@ -1,0 +1,1 @@
+using {myhanaproj3.db.LKMDEMO as LKMDEMO} from '../db/schema'; service CatalogService @(path : '/srv') { entity Customers as projection on LKMDEMO.Customers; entity Employee as projection on LKMDEMO.Employee; entity HOTEL as projection on LKMDEMO.HOTEL;};

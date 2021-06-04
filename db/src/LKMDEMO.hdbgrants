@@ -1,0 +1,14 @@
+{
+    "myhanaproj3-db-LKMDEMO": {
+        "object_owner": {
+            "roles": [
+                "myhanaproj3_LKMDEMO::EXTERNAL_ACCESS_G"
+            ]
+        },
+        "application_user": {
+            "roles": [
+                "myhanaproj3_LKMDEMO::EXTERNAL_ACCESS"
+            ]
+        }
+    }
+}

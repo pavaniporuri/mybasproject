@@ -1,0 +1,201 @@
+{
+  "namespace": "myhanaproj3.db",
+  "definitions": {
+    "CatalogService": {
+      "@source": "srv/cat-service.cds",
+      "kind": "service",
+      "@path": "/srv"
+    },
+    "CatalogService.Customers": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "myhanaproj3.db.LKMDEMO.Customers"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "id": {
+          "key": true,
+          "type": "cds.Integer",
+          "notNull": true
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 30,
+          "notNull": true
+        },
+        "city": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "gender": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "number_of_trips": {
+          "type": "cds.Integer"
+        },
+        "loyalty_member": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": 0
+          }
+        },
+        "balance": {
+          "type": "cds.Decimal",
+          "precision": 6,
+          "scale": 2
+        }
+      },
+      "$syntax": "projection"
+    },
+    "CatalogService.Employee": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "myhanaproj3.db.LKMDEMO.Employee"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "id": {
+          "key": true,
+          "type": "cds.Integer",
+          "notNull": true
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 30
+        }
+      },
+      "$syntax": "projection"
+    },
+    "CatalogService.HOTEL": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "myhanaproj3.db.LKMDEMO.HOTEL"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "hno": {
+          "key": true,
+          "type": "cds.Integer",
+          "notNull": true
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 50,
+          "notNull": true
+        },
+        "zip": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "address": {
+          "type": "cds.String",
+          "length": 40,
+          "notNull": true
+        }
+      },
+      "$syntax": "projection"
+    },
+    "myhanaproj3.db.LKMDEMO": {
+      "kind": "context"
+    },
+    "myhanaproj3.db.LKMDEMO.Customers": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "elements": {
+        "id": {
+          "key": true,
+          "type": "cds.Integer",
+          "notNull": true
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 30,
+          "notNull": true
+        },
+        "city": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "gender": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "number_of_trips": {
+          "type": "cds.Integer"
+        },
+        "loyalty_member": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": 0
+          }
+        },
+        "balance": {
+          "type": "cds.Decimal",
+          "precision": 6,
+          "scale": 2
+        }
+      }
+    },
+    "myhanaproj3.db.LKMDEMO.Employee": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "elements": {
+        "id": {
+          "key": true,
+          "type": "cds.Integer",
+          "notNull": true
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 30
+        }
+      }
+    },
+    "myhanaproj3.db.LKMDEMO.HOTEL": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "elements": {
+        "hno": {
+          "key": true,
+          "type": "cds.Integer",
+          "notNull": true
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 50,
+          "notNull": true
+        },
+        "zip": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "address": {
+          "type": "cds.String",
+          "length": 40,
+          "notNull": true
+        }
+      }
+    }
+  },
+  "meta": {
+    "flavor": "inferred",
+    "creator": "CDS Compiler v1.50.6"
+  },
+  "$version": "1.0"
+}

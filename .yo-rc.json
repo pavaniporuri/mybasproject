@@ -1,0 +1,13 @@
+{
+  "generator-saphanaacademy-odata": {
+    "projectName": "myhanaproj3",
+    "newDir": true,
+    "hanaEndpoint": "zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:32671",
+    "hanaUser": "SYSTEM",
+    "hanaPassword": "Accenture12345+",
+    "schemaName": "LKMDEMO",
+    "v2support": true,
+    "auth": false,
+    "buildDeploy": true
+  }
+}
